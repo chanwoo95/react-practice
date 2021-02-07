@@ -1,0 +1,20 @@
+li {
+    list-style: none;
+}
+
+.habit {
+    margin: 10px;
+    font-size: 32px;
+}
+
+.habit-button {
+    font-size: 32px;
+
+    outline: none;
+    border: none;
+    background-color: transparent;
+}
+
+.habit-button:hover {
+    opacity: 0.8;
+}
