@@ -1,10 +1,20 @@
-li {
+.habit {
+    margin: 10px;
+    font-size: 2.5rem;
     list-style: none;
 }
 
-.habit {
-    margin: 10px;
-    font-size: 32px;
+.habit-count {
+    display: inline-block;
+    text-align: center;
+    font-size: 2rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    background-color: darkseagreen;
+    margin: 0px 0.5rem;
+    color: white;
+    border-radius: 50%;
 }
 
 .habit-button {
@@ -17,4 +27,13 @@ li {
 
 .habit-button:hover {
     opacity: 0.8;
+}
+
+.habit-increase,
+.habit-decrease {
+    color: gold;
+}
+
+.habit-trash {
+    color: red;
 }
