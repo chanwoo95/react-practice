@@ -1,37 +1,32 @@
 import React, { Component } from 'react';
 
 class Habit extends Component {
-    state = {
-        count: 0,
-    };
-
-    handleIncrease = () => {
-        this.setState({ count: this.state.count + 1 });
-    };
-
-    handleDecrease = () => {
-        const count = this.state.count - 1;
-        this.setState({ count: count < 0 ? 0 : count });
+    habitIncrease = () => {
+        this.props.onIncrease(this.props.habit);
     };
 
     render() {
+        const { name, count } = this.props.habit;
         return (
             <li className="habit">
-                <span className="habit-name">Reading</span>
-                <span className="habit-count">{this.state.count}</span>
+                <span className="habit-name">{name}</span>
+                <span className="habit-count">{count}</span>
                 <button
                     className="habit-button habit-increase"
-                    onClick={this.handleIncrease}
+                    onClick={this.habitIncrease}
                 >
                     <i className="fas fa-plus-square"></i>
                 </button>
                 <button
                     className="habit-button habit-decrease"
-                    onClick={this.handleDecrease}
+                    onClick={this.habitDecrease}
                 >
                     <i className="fas fa-minus-square"></i>
                 </button>
-                <button className="habit-button habit-trash">
+                <button
+                    className="habit-button habit-trash"
+                    onClick={this.habitDelete}
+                >
                     <i className="fas fa-trash"></i>
                 </button>
             </li>
