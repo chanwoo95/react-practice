@@ -5,6 +5,13 @@ class Habit extends Component {
         this.props.onIncrease(this.props.habit);
     };
 
+    habitDecrease = () => {
+        this.props.onDecrease(this.props.habit);
+    };
+
+    habitDelete = () => {
+        this.props.onDelete(this.props.habit);
+    };
     render() {
         const { name, count } = this.props.habit;
         return (
