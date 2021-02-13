@@ -29,7 +29,7 @@ class Habits extends Component {
     habitDelete = (habit) => {
         const habits = [...this.state.habits];
         const index = habits.indexOf(habit);
-        habits[index].removeChild();
+
         this.setState({ habits });
     };
 
