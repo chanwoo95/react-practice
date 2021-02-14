@@ -10,9 +10,12 @@ class App extends Component {
                 <nav>
                     Habit Tracker <span className="habit-count deep">7</span>
                 </nav>
-                <input className="habit-input"></input>
-                <button className="habit-add">add</button>
-                <Habits />;
+                <div className="habit-set">
+                    <input className="habit-input"></input>
+                    <button className="habit-add">add</button>
+                </div>
+                <Habits />
+                <button className="habit-reset">Reset All</button>
             </>
         );
     }
