@@ -42,17 +42,6 @@ class App extends Component {
                     onDecrease={this.habitDecrease}
                     onDelete={this.habitDelete}
                 />
-                {/* <div className="habit-set">
-                    <input className="habit-input" placeholder="Habit"></input>
-                    <button
-                        className="habit-btn habit-add"
-                        onClick={this.onAdd}
-                    >
-                        add
-                    </button>
-                </div>
-                <Habits />
-                <button className="habit-btn habit-reset">Reset All</button> */}
             </>
         );
     }
