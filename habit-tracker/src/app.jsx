@@ -33,7 +33,9 @@ class App extends Component {
         this.setState({ habits });
     };
 
-    handleTotal = () => {};
+    handleTotal = () => {
+        const total = 
+    };
     render() {
         return (
             <>
