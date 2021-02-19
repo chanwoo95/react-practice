@@ -32,10 +32,12 @@ class App extends Component {
         const habits = this.state.habits.filter((item) => item.id !== habit.id);
         this.setState({ habits });
     };
+
+    handleTotal = () => {};
     render() {
         return (
             <>
-                <Navbar />
+                <Navbar totalCount={this.handleTotal} />
                 <Habits
                     habit={habit}
                     onIncrease={this.habitIncrease}
