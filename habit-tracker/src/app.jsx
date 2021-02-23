@@ -33,12 +33,16 @@ class App extends Component {
         this.setState({ habits });
     };
 
+    onAdd = (habit) => {
+        const habits = this.state.habits.map((item) => item[habit]);
+    };
     render() {
         return (
             <>
                 <Navbar totalCount={this.handleTotal} />
                 <Habits
                     habit={habit}
+                    onAdd={}
                     onIncrease={this.habitIncrease}
                     onDecrease={this.habitDecrease}
                     onDelete={this.habitDelete}

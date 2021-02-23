@@ -5,6 +5,7 @@ class Habits extends Component {
     render() {
         return (
             <div className="habit">
+                <HabitAddForm />
                 <ul>
                     {this.props.habits.map((habit) => (
                         <Habit
