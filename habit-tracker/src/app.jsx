@@ -22,7 +22,6 @@ class App extends Component {
     habitDecrease = (habit) => {
         const habits = [...this.state.habits];
         const index = habits.indexOf(habit);
-        console.log(index);
         const count = habits[index].count - 1;
         habits[index].count = count < 0 ? 0 : count;
         this.setState({ habits });
@@ -33,16 +32,21 @@ class App extends Component {
         this.setState({ habits });
     };
 
-    onAdd = (habit) => {
-        const habits = this.state.habits.map((item) => item[habit]);
-    };
+    // onAdd = (habit) => {
+    //     const habits = [...this.state.habits];
+    //     habits.push(habit);
+    //     this.setState({ habits });
+    // };
     render() {
         return (
             <>
-                <Navbar totalCount={this.handleTotal} />
-                <Habits
-                    habit={habit}
-                    onAdd={}
+                <Navbar 
+                totalCount={this.state.habits.filter(item => item.id>0).length} 
+                />
+   
+                <Habits 
+                    habits={this.state.habits}
+                    onAdd={this.onAdd}
                     onIncrease={this.habitIncrease}
                     onDecrease={this.habitDecrease}
                     onDelete={this.habitDelete}
