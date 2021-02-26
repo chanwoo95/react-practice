@@ -32,19 +32,25 @@ class App extends Component {
         this.setState({ habits });
     };
 
-    // onAdd = (habit) => {
-    //     const habits = [...this.state.habits];
-    //     habits.push(habit);
-    //     this.setState({ habits });
-    // };
+    onAdd = (name) => {
+        const habits = [
+            ...this.state.habits,
+            { id: Date.now(), name, count: 0 },
+        ];
+        this.setState({ habits });
+    };
+
     render() {
         return (
             <>
-                <Navbar 
-                totalCount={this.state.habits.filter(item => item.id>0).length} 
+                <Navbar
+                    totalCount={
+                        this.state.habits.filter((item) => item.count > 0)
+                            .length
+                    }
                 />
-   
-                <Habits 
+
+                <Habits
                     habits={this.state.habits}
                     onAdd={this.onAdd}
                     onIncrease={this.habitIncrease}
