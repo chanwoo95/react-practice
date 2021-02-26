@@ -41,7 +41,15 @@ button {
     list-style: none;
 }
 
-.habit-add {
+.add-input {
+    padding: 14px;
+    font-size: 18px;
+}
+
+.add-button {
+    border: none;
+    background-color: green;
+    color: white;
     margin-left: 12px;
     font-size: 2.5rem;
 }
