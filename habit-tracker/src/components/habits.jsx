@@ -13,11 +13,14 @@ class Habits extends Component {
                             key={habit.id}
                             habit={habit}
                             onIncrease={this.props.onIncrease}
-                            onDecrease={this.props.onDecrese}
+                            onDecrease={this.props.onDecrease}
                             onDelete={this.props.onDelete}
                         />
                     ))}
                 </ul>
+                <button className="reset-button" onClick={this.props.onReset}>
+                    Reset All
+                </button>
             </div>
         );
     }
