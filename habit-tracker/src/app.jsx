@@ -15,7 +15,7 @@ class App extends Component {
     habitIncrease = (habit) => {
         const habits = this.state.habits.map((item) => {
             if (habit.id === item.id) {
-                return { ...habit, count: habit.count + 1 };
+                return { ...item, count: item.count + 1 };
             } else {
                 return item;
             }
@@ -27,8 +27,8 @@ class App extends Component {
         const habits = this.state.habits.map((item) => {
             if (habit.id === item.id) {
                 console.log(`habit.id: ${habit.id}, item.id: ${item.id}`);
-                const count = habit.count - 1;
-                return { ...habit, count: count < 0 ? 0 : count };
+                const count = item.count - 1;
+                return { ...item, count: count < 0 ? 0 : count };
             } else {
                 return item;
             }
